@@ -19,11 +19,11 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-molecules/swift-property.git",
+            url: "https://github.com/swift-atoms/swift-property.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-carrier.git",
+            url: "https://github.com/swift-atoms/swift-carrier.git",
             branch: "main"
         ),
     ],
@@ -37,7 +37,11 @@ let package = Package(
         ),
         .testTarget(
             name: "Property Carrier Tests",
-            dependencies: ["Property Carrier"],
+            dependencies: [
+                "Property Carrier",
+                .product(name: "Property", package: "swift-property"),
+                .product(name: "Carrier", package: "swift-carrier"),
+            ],
             path: "Tests/Property Carrier Tests"
         ),
     ],

@@ -1,7 +1,7 @@
-public import Carrier
-public import Property
+public import enum Carrier.Carrier
+public import struct Property.Property
 
-extension Property: Carrier.`Protocol` where Base: ~Copyable {
+extension Property: @retroactive Carrier.`Protocol` where Base: ~Copyable {
 
     public typealias Underlying = Base
 
