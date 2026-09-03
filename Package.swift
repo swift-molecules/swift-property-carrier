@@ -19,11 +19,11 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-atoms/swift-property.git",
+            url: "https://github.com/swift-atoms/swift-property",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-atoms/swift-carrier.git",
+            url: "https://github.com/swift-atoms/swift-carrier",
             branch: "main"
         ),
     ],
